@@ -86,3 +86,48 @@
 // div.addEventListener('click',()=>{ console.log("clicked the div")},false)
 // div.addEventListener('click',()=>{ console.log("clicked the outer div")},false)
 // div.addEventListener('click',()=>{ console.log("clicked the button")},false)
+
+// js execution context
+
+
+// console.log(a);
+// console.log(b);
+
+// var a = 678;
+// let b = 567;
+
+// console.log(a);
+// console.log(b);
+
+// function print(){
+//     let c=63
+//     console.log(c)
+//     console.log("inside fn")
+// }
+
+// print()
+
+
+// function greet(){
+//     var message="hello"
+//     console.log(message)
+// }
+
+// greet()
+// console.log(message)
+
+debugger;
+
+function first(){
+    second()
+}
+
+function second(){
+    third()
+}
+
+function third(){
+    console.trace()
+}
+
+first()
