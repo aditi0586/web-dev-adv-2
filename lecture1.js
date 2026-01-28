@@ -116,18 +116,118 @@
 // greet()
 // console.log(message)
 
-debugger;
+// debugger;
 
-function first(){
-    second()
-}
+// function first(){
+//     second()
+// }
 
-function second(){
-    third()
-}
+// function second(){
+//     third()
+// }
 
-function third(){
-    console.trace()
-}
+// function third(){
+//     console.trace()
+// }
 
-first()
+// first()
+
+// function infinite(){
+//     Infinity()
+// }
+
+// infinite()
+
+// console.log(a)
+// let a = 10
+
+// console.log("first line")
+// setTimeout(()=>{console.log("line after 2 sec")},2000)
+// console.log("second line")
+// console.log("second line")
+// console.log("second line")
+// console.log("second line")
+// console.log("second line")
+// console.log("second line")
+// console.log("second line")
+
+
+
+// setTimeout(() => {
+//     alert("after 3 sec")
+// },3*1000);
+
+// const timerId=setInterval(() => {
+//     console.log(" after 3 sec")
+// },1000);
+// console.log(timerId)
+// clearInterval()
+// setTimeout(() => {
+//     clearInterval(timerId)
+// },10*1000);
+
+// let count=0;
+// const timerid=setInterval(() => {
+//     count++;
+//     console.log("1 second passed",count);
+//     if(count===10){
+//         clearInterval(timerid);
+//         console.log("interval cleared");
+//     }
+// }, 1000);
+
+// var hello=1
+// const timerId=setInterval(()=>{
+//     hello+=1
+//     console.log(hello)
+// },1000)
+
+// console.log(timerId)
+// setTimeout(()=>{
+//     clearInterval(timerId)
+// },10*1000)
+
+
+// let count=1
+
+// const timerId=setInterval(()=>{
+//     if(count===10)clearInterval(timerId)
+//     console.log(count)
+//     count+=1
+// },1000)
+
+// const name=document.querySelector("#name")
+// const btn=document.querySelector(".btn")
+// const list=document.querySelector(".list")
+
+// btn.addEventListener('click',()=>{
+//     const li=document.createElement('li')
+//     li.innerText=name.value
+// list.appendChild(li)
+// name.value=""
+// })
+
+
+const name=document.querySelector("#name")
+const btn=document.querySelector(".btn")
+const list=document.querySelector(".list")
+
+btn.addEventListener("click",()=>{
+    if(name.value==="")return;
+    const li=document.createElement("li")
+    const dlt=document.createElement("button")
+
+
+    dlt.innerText="Delete"
+    li.innerText=name.value;
+    dlt.addEventListener("click",()=>{
+        list.removeChild(li)
+    })
+
+
+    list.appendChild(li)
+    li.appendChild(dlt)
+
+    
+    name.value=""
+})
