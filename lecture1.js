@@ -314,21 +314,164 @@
 
 
 
-const p=new Promise((res, rej)=>{
-    let done=true
-    setTimeout(()=>{
-        if(done){
-            res("work is done!!")
-        }else{
-            rej("work is not done")
+// const p=new Promise((res, rej)=>{
+//     let done=true
+//     setTimeout(()=>{
+//         if(done){
+//             res("work is done!!")
+//         }else{
+//             rej("work is not done")
+//         }
+//     }, 5000);
+// })
+// // console.log(p)
+// p.then((msg)=>{
+//     console.log(msg)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("finally blocked")
+// })
+
+
+// event loop
+
+
+// function orderFood(){
+//     return new Promise((res, rej)=>{
+//         setTimeout(()=>{
+//             console.log("food ordered")
+//             res("food is ready")
+//         }, 2000)
+//     })
+// }
+
+// function prepareFood(){
+//     return new Promise((res, rej)=>{
+//         setTimeout(()=>{
+//             console.log("food prepared")
+//             res()
+//         }, 2000)
+//     })
+// }
+
+
+// function orderDeliver(){
+//     return new Promise((res, rej)=>{
+//         setTimeout(()=>{
+//             console.log("food delivered")
+//             res()
+//         }, 2000)
+//     })
+// }
+
+
+// async function order(){
+//     await orderFood()
+//     await prepareFood()
+//     await orderDeliver()
+    
+// }
+
+// order()
+
+// async function order(){
+//     const data=await orderFood()
+//     console.log(data)
+//     await prepareFood()
+//     await orderDeliver()
+    
+// }
+
+// order()
+
+// orderFood().then((data)=>{
+//     return prepareFood()
+// }).then((data)=>{
+//     return orderDeliver()
+// }).then((data)=>{
+
+// }).catch((err)=>{
+//     console.log("something went wrong")
+// })
+
+// console.log("first line")
+// try{
+//     console.log(sample)
+//     console.log("line after sample")
+// }catch(e){
+//     console.log(e)
+// }
+// console.log("last line")
+
+
+// console.log("first line")
+// console.log(sample)
+// console.log("last line")
+
+
+
+
+// console.log("first line")
+// try{
+    // console.log(sample)
+    // console.log("line after sample")
+//     let age=16
+//     if (age<18){
+//         throw new Error("age must be greater than 18")
+//     }
+// }catch(e){
+//     console.warn(e)
+// }
+// console.log("last line")
+
+
+
+// async function getData(){
+//     const response=await fetch("https://dummyjson.com/products")
+//     const data=await response.json()
+//     // console.log(data.products[0].title)
+//     data.product.forEach((product)=>{
+//         console.log(product.title)
+//     })
+// }
+// getData()
+
+
+// async function getdata(){
+
+// const response = await fetch("https://dummyjson.com/products")
+// const data = await response.json()
+// // console.log(data.products[0].title)
+// data.products.forEach((product)=>{
+//     console.log(product.title)
+// })
+
+// }
+
+// getdata()
+
+
+async function getdata(){
+    try{
+        const response = await fetch("https://dummyjson.com/products/200")
+        if(response.ok===false){
+            throw new Error("something went wrong")
         }
-    }, 5000);
-})
-// console.log(p)
-p.then((msg)=>{
-    console.log(msg)
-}).catch((err)=>{
-    console.log(err)
-}).finally(()=>{
-    console.log("finally blocked")
-})
+        const data = await response.json()
+        console.log(data)
+        // console.log(data.products[0].title)
+        data.products.forEach((product)=>{
+            console.log(product.title)
+        })
+    }catch(e){
+        console.log(e)
+    }finally{
+        console.log("finally block")
+    }
+}
+
+getdata()
+
+
+
