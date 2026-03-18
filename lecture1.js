@@ -452,26 +452,217 @@
 // getdata()
 
 
-async function getdata(){
-    try{
-        const response = await fetch("https://dummyjson.com/products/200")
-        if(response.ok===false){
-            throw new Error("something went wrong")
-        }
-        const data = await response.json()
-        console.log(data)
-        // console.log(data.products[0].title)
-        data.products.forEach((product)=>{
-            console.log(product.title)
-        })
-    }catch(e){
-        console.log(e)
-    }finally{
-        console.log("finally block")
-    }
-}
+// async function getdata(){
+//     try{
+//         const response = await fetch("https://dummyjson.com/products")
+//         if(response.ok===false){
+//             throw new Error("something went wrong")
+//         }
+//         const data = await response.json()
+//         console.log(data)
+//         // console.log(data.products[0].title)
+//         data.products.forEach((product)=>{
+//             console.log(product.title)
+//         })
+//     }catch(e){
+//         console.log(e)
+//     }finally{
+//         console.log("finally block")
+//     }
+// }
 
-getdata()
+// getdata()
+
+
+
+
+// async function getdata(){
+//     try{
+//         const response = await fetch("https://dummyjson.com/products", {
+//             method:"GET",
+//         }
+//         )
+//         if(response.ok===false){
+//             throw new Error("something went wrong")
+//         }
+//         const data = await response.json()
+//         console.log(data)
+//         // console.log(data.products[0].title)
+//         data.products.forEach((product)=>{
+//             console.log(product.title)
+//         })
+//     }catch(e){
+//         console.log(e)
+//     }finally{
+//         console.log("finally block")
+//     }
+// }
+
+// getdata()
+
+
+
+
+
+
+
+
+
+// async function sendData(){
+//     const response=await fetch('https://dummyjson.com/products',{
+//         method:"POST",
+//         headers:{
+//             "Content-Type":"application/json"
+//     },
+//         body:JSON.stringify({
+//             title:"test product",
+//             description:"this is a new product",
+//             price:100,
+//             discountPercentage:10,
+//             rating:4.5,
+//             stock:50,
+//             brand:"ABC",
+//             category:"Electronics",
+//         })
+//     })
+//     const data=await response.json()
+//     console.log(data)
+// }
+// sendData();
+
+
+
+
+
+// localStorage.setItem("name","Alex")
+// localStorage.setItem("age",45)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))    
+
+// localStorage.removeItem("name")
+// console.log(localStorage.getItem("name"))
+
+
+// sessionStorage.setItem("name","Alex")
+// sessionlStorage.setItem("age",45)
+
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))    
+
+// sessionStorage.removeItem("name")
+// console.log(sessionStorage.getItem("name"))
+
+
+
+
+
+// localStorage.setItem("name","Alex")
+// localStorage.setItem("age",45)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))  
+
+// localStorage.setItem("name","John")
+
+
+
+
+
+
+// async function sendData() {
+//     const response = await fetch("https://dummyjson.com/products", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"  },
+//         body: JSON.stringify({
+//             title: "new product ",
+//             price: 549,
+//             description: "this is some new product ", 
+//             discountedPercentage: 10,
+//             rating: 4.5,
+//             stock: 100,
+//             brand : "abc ",
+//             category: "elecronics ",
+            
+//         })
+//     })
+//     const data = await response.json();
+//     console.log(data);
+// }
+// localStorage.setItem ("Name ", "Alex ")
+// localStorage.setItem("Age ", 23);
+
+// console.log(localStorage.getItem("Name "));
+// console.log(localStorage.getItem("Age "));
+
+// localStorage.removeItem("Name ");
+// console.log(localStorage.getItem("Name "));
+ 
+// localStorage.setItem("Name ", "John");
+
+
+
+
+
+
+
+
+
+
+
+
+// document.cookie="name=Alex; expires=Fri, 23 Dec 2026 23:59:59 GMT"
+// document.cookie="age=45; expires=Fri, 25 Dec 2026 23:59:59 GMT"
+
+// console.log(document.cookie)
+
+
+
+// function* generator(){
+    // yield 1;
+    // yield 2;
+    // yield 3;
+//     let index=225017343
+//     while(true){
+//         yield index;
+//         index++
+//     }
+// }
+// const gen=generator()
+// console.log(gen)
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+
+
+// #important
+
+
+// function add(x){
+//     return function(y){
+//         return function(z){
+//             return x+y+z
+//         }
+//     }
+// }
+
+// const first = add(1)
+// console.log(first)
+// const second = first(2)
+// console.log(second)
+// console.log(second(3))
+
+// console.log(add(1)(2)(3))
+
+// console.log(add(1,2))
+
+
+
+
+
+
 
 
 
